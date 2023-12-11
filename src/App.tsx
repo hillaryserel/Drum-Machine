@@ -63,11 +63,11 @@ function App() {
     document.getElementById("display")!.innerText = clip.description;
    };
   return (
-  <div className="container" id="drum-machine" OnKeyDown={playAudio}  >
+  <div className="container" id="drum-machine" onKeyDown={playAudio}  >
     <h1>FCC Drum Machine</h1>
     <div className="whole-drum">
       {audioClips.map((clip) => (
-        <Drum audioClip={clip} key={audioClips.keyTrigger} />
+        <Drum audioClip={clip} key={clip.keyTrigger} />
       ))}
     </div>
     <div id="display"></div>

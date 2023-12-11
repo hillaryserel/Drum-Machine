@@ -1,10 +1,10 @@
-import { AudioClip } from "./types";
+import { Audioclip } from "./types";
 
 interface DrumProps{
-    audioClip: AudioClip;
+    audioClip: Audioclip;
 }
 const Drum = ({audioClip }: DrumProps) => {
-   const playSound = (clip: AudioClip) => {
+   const playSound = (clip: Audioclip) => {
     (document.getElementById(clip.keyTrigger) as HTMLAudioElement)
     .play()
     .catch(console.error);
